@@ -14,6 +14,7 @@
     <!-- Custom Google Fonts for a festive look -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Baloo+2&display=swap" rel="stylesheet">
 
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
     <link rel="stylesheet" href="static/andi.css">
 </head>
 
@@ -30,16 +31,114 @@
                     <a class="nav-link text-warning" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-warning" href="yandi.html">yandi</a>
+                    <a class="nav-link text-warning" href="yandi.html">Yandi</a>
                 </li>
             </ul>
         </div>
          
     </nav>
-    <div class = "v">
-    <video width="640" height="360" controls style="display:block; margin:auto;">
-      <source src="static/Cjaya.mp4" type="video/mp4">
-    </video>
+
+    <div class="button-container text-center my-4">
+        <button id="show-btn" class="btn" style="background-color:#ff9bb3; border-color:#ff85a2; color:#000;" onclick="showMessage(event)">Open Birthday Card</button>
+        <button id="hide-btn" class="btn" style="display:none; margin-left: 10px; background-color:#ff9bb3; border-color:#ff85a2; color:#000;" onclick="hideMessage()">Close</button>
+    </div>
+
+    <div id="birthday-msg" class="text" style="max-width:720px; display:none;">
+        <p>
+           
+happy birthday my love :) ❤️❤️
+
+I can honestly say that celebrating your 19th birthday by my side, not just as someone in your life but as a boyfriend has been the greatest blessing i’ve ever received babe. it has been an honor to be picked by you as your partner in life and I wouldn’t trade it for anything in the world.
+
+you have been nothing but a blessing not only to me, but to everyone around you. you’re the kindest, most sweet hearted and ethereal being that i’ve ever crossed paths with and i’m forever thankful for that. i appreciate you for more than you could imagine bae!! i am so thankful to God for bringing us into each others lives. you are my light in life, which i never knew existed.
+
+I would love to be there with you today to hold you close and wish you on your blessed day. since i’m not physically present by your side, my prayers are always with you and in your heart, hoping that you’ll have the best day ever!!! I wish you a 19th filled with love, happiness, blessings, and success beyond imagination. you are deserving of ALL the best in life baby!!
+
+HAPPY BIRTHDAY MY LOVEEE, i love you to stellies and back a thousand times. have the best day EVER on your 19th birthday baby! ~ Ofentse
+        </p>
+    </div>
+
+    <div class="videos text-center">
+      <div class="v mb-4">
+        <video width="640" height="360" controls style="display:block; margin:auto;">
+          <source src="static/YA.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="v mb-4">
+        <video width="640" height="360" controls style="display:block; margin:auto;">
+          <source src="static/OA.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="v mb-4">
+        <video width="640" height="360" controls style="display:block; margin:auto;">
+          <source src="static/MA.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="v mb-4">
+        <video width="640" height="360" controls style="display:block; margin:auto;">
+          <source src="static/DA.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="v mb-4">
+        <video width="640" height="360" controls style="display:block; margin:auto;">
+          <source src="static/UA.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="v mb-4">
+        <video width="640" height="360" controls style="display:block; margin:auto;">
+          <source src="static/Cjaya.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="v mb-4">
+        <video width="640" height="360" controls style="display:block; margin:auto;">
+          <source src="static/VA.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="v mb-4">
+        <video width="640" height="360" controls style="display:block; margin:auto;">
+          <source src="static/PA.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="v mb-4">
+        <video width="640" height="360" controls style="display:block; margin:auto;">
+          <source src="static/WA.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="v mb-4">
+        <video width="640" height="360" controls style="display:block; margin:auto;">
+          <source src="static/NA.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="v mb-4">
+        <video width="640" height="360" controls style="display:block; margin:auto;">
+          <source src="static/AA.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="v mb-4">
+        <video width="640" height="360" controls style="display:block; margin:auto;">
+          <source src="static/VuA.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="v mb-4">
+        <video width="640" height="360" controls style="display:block; margin:auto;">
+          <source src="static/TA.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="v mb-4">
+        <video width="640" height="360" controls style="display:block; margin:auto;">
+          <source src="static/AnA.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="v mb-4">
+        <video width="640" height="360" controls style="display:block; margin:auto;">
+          <source src="static/SA.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="v mb-4">
+        <video width="640" height="360" controls style="display:block; margin:auto;">
+          <source src="static/DaA.mp4" type="video/mp4">
+        </video>
+      </div>
     </div>
     <script>
   const canvas = document.getElementById("white-dots");
@@ -94,7 +193,7 @@ function animate() {
     ctx.fill();
 
     dot.y += dot.speed;
-    dot.rotation += 0.01; // slowly spin each star
+    dot.rotation += 0.01;
 
     if (dot.y > canvas.height) {
       dot.y = -10;
@@ -111,6 +210,22 @@ window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 });
+
+function showMessage(event) {
+    document.getElementById("birthday-msg").style.display = "block";
+    document.getElementById("show-btn").style.display = "none";
+    document.getElementById("hide-btn").style.display = "inline-block";
+
+    confetti({
+        colors: ['#FFD700', '#FF69B4', '#FF1493', '#FFF', '#FF6347']
+    });
+}
+
+function hideMessage() {
+    document.getElementById("birthday-msg").style.display = "none";
+    document.getElementById("hide-btn").style.display = "none";
+    document.getElementById("show-btn").style.display = "inline-block";
+}
 </script>
 <footer>
   <p>© 2025 Andi &nbsp;|&nbsp; 
