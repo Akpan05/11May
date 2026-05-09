@@ -1,0 +1,113 @@
+body {
+  background-color: rgb(181, 127, 0); /* your cream background */
+  background-image: url("grass-with-flowers-isolated-on-transparent-background-3d-rendering-illustration-png.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% auto;        /* full width, auto height */
+  background-position: center calc(100% + 20px);
+}
+
+/* Custom navbar background */
+.navbar-image {
+  position: absolute;   /* position relative to navbar */
+  bottom: 0;            /* anchor to bottom of navbar */
+  left: 50%;            /* center horizontally */
+  transform: translateX(-50%);
+  height: 60px;         /* adjust size */
+  z-index: 1;           /* keep it visible above background */
+}
+.text {
+  width: 80%;
+  /* controls how wide it is */
+  margin: 40px auto;
+  /* top/bottom spacing + center horizontally */
+  padding: 20px;
+  /* inner spacing for text */
+  background-color: rgb(199, 186, 116);
+  /* cream background */
+  border: 3px solid #b8860b;
+  /* gold border */
+  border-radius: 15px;
+  /* rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* subtle shadow */
+
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.yandi-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.5rem;
+  font-size: 1rem;
+  color: #3e2a00;
+  background-color: rgb(199, 186, 116);
+  border: 3px solid #b8860b;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  text-decoration: none;
+  min-width: 260px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.yandi-button:hover,
+.yandi-button:focus {
+  background-color: rgb(216, 200, 133);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.v{
+  width: 80%;
+  /* controls how wide it is */
+  margin: 40px auto;
+  /* top/bottom spacing + center horizontally */
+  padding: 20px;
+  /* inner spacing for text */
+  background-color: rgb(199, 186, 116);
+  /* cream background */
+  border: 3px solid #b8860b;
+  /* gold border */
+  border-radius: 15px;
+  /* rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* subtle shadow */
+
+}
+#golden-dots {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;        /* stays behind all content */
+  pointer-events: none; /* clicks pass through */
+}
+
+nav.navbar {
+    background-color: rgba(63, 84, 21, 0.872);
+    border-bottom-right-radius: 1.5rem;
+}
+
+.navbar h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+}
+
+.navbar .nav-link {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.navbar .nav-link:hover {
+    color: #fffdd0;
+    /* cream hover effect */
+}

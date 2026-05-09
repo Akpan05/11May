@@ -1,0 +1,145 @@
+/* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Cormorant+Garamond:wght@400;700&display=swap');
+
+body {
+  background-color: #f5e6c4;
+  /* cream */
+  color: #000000;
+  /* black text */
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom navbar background */
+
+.navbar h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+.navbar .nav-link {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.navbar .nav-link:hover {
+  color: #fffdd0; /* cream hover effect */
+}
+
+
+/* Centered carousel box */
+.centered-carousel {
+  width: 800px;
+  /* fixed width */
+  height: 500px;
+  /* fixed height */
+  margin: 40px auto;
+  /* centers horizontally */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* semi-transparent black background */
+  border: 3px solid #b8860b;
+  /* gold border */
+  border-radius: 12px;
+  /* rounded corners */
+  display: flex;
+  align-items: center;
+  /* vertical centering */
+  justify-content: center;
+  /* horizontal centering */
+  overflow: hidden;
+}
+
+/* Images inside carousel */
+.centered-carousel .carousel-item img {
+  max-width: 100%;
+  /* shrink to fit width */
+  max-height: 100%;
+  /* shrink to fit height */
+  width: auto;
+  /* don’t stretch */
+  height: auto;
+  /* don’t stretch */
+  object-fit: contain;
+  /* keep full image visible */
+  margin: auto;
+  /* center inside box */
+  background-color: #000;
+  /* fills empty space (letterbox) */
+}
+
+.text {
+  width: 80%;
+  /* controls how wide it is */
+  margin: 40px auto;
+  /* top/bottom spacing + center horizontally */
+  padding: 20px;
+  /* inner spacing for text */
+  background-color: rgb(199, 186, 116);
+  /* cream background */
+  border: 3px solid #b8860b;
+  /* gold border */
+  border-radius: 15px;
+  /* rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* subtle shadow */
+}
+
+/* Headings with gold accent */
+h1,
+h2,
+h3 {
+  color: #b8860b;
+  /* dark gold */
+  font-family: 'Playfair Display', serif;
+}
+
+/* Links */
+a {
+  color: #b8860b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #daa520;
+  /* goldenrod hover */
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn-gold {
+  background-color: #b8860b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: #daa520;
+}
+
+/* Accent borders */
+.gold-border {
+  border: 2px solid #b8860b;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Navbar example */
+.navbar {
+  background-color: #fffdd0;
+  border-bottom: 2px solid #b8860b;
+}
+
+.navbar a {
+  color: #000;
+  margin: 0 10px;
+}
+
+.navbar a:hover {
+  color: #b8860b;
+}
