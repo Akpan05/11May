@@ -1,37 +1,29 @@
 body {
-  background-color: rgb(181, 127, 0); /* your cream background */
+  background-color: rgb(181, 127, 0);
   background-image: url("grass-with-flowers-isolated-on-transparent-background-3d-rendering-illustration-png.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100% auto;        /* full width, auto height */
+  background-size: 100% auto;
   background-position: center calc(100% + 20px);
 }
 
-/* Custom navbar background */
 .navbar-image {
-  position: absolute;   /* position relative to navbar */
-  bottom: 0;            /* anchor to bottom of navbar */
-  left: 50%;            /* center horizontally */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
   transform: translateX(-50%);
-  height: 60px;         /* adjust size */
-  z-index: 1;           /* keep it visible above background */
+  height: 60px;
+  z-index: 1;
 }
+
 .text {
   width: 80%;
-  /* controls how wide it is */
   margin: 40px auto;
-  /* top/bottom spacing + center horizontally */
   padding: 20px;
-  /* inner spacing for text */
   background-color: rgb(199, 186, 116);
-  /* cream background */
   border: 3px solid #b8860b;
-  /* gold border */
   border-radius: 15px;
-  /* rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  /* subtle shadow */
-
 }
 
 .button-container {
@@ -64,50 +56,82 @@ body {
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
 }
 
-.v{
+.v {
   width: 80%;
-  /* controls how wide it is */
   margin: 40px auto;
-  /* top/bottom spacing + center horizontally */
   padding: 20px;
-  /* inner spacing for text */
   background-color: rgb(199, 186, 116);
-  /* cream background */
   border: 3px solid #b8860b;
-  /* gold border */
   border-radius: 15px;
-  /* rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  /* subtle shadow */
-
 }
+
+/* Make videos and iframes responsive */
+.v video,
+.v iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
+  margin: auto;
+}
+
 #golden-dots {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -1;        /* stays behind all content */
-  pointer-events: none; /* clicks pass through */
+  z-index: -1;
+  pointer-events: none;
 }
 
 nav.navbar {
-    background-color: rgba(63, 84, 21, 0.872);
-    border-bottom-right-radius: 1.5rem;
+  background-color: rgba(63, 84, 21, 0.872);
+  border-bottom-right-radius: 1.5rem;
 }
 
 .navbar h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
 }
 
 .navbar .nav-link {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    text-decoration: none;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  text-decoration: none;
 }
 
 .navbar .nav-link:hover {
-    color: #fffdd0;
-    /* cream hover effect */
+  color: #fffdd0;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .text {
+    width: 92%;
+    margin: 20px auto;
+    font-size: 14px;
+    padding: 14px;
+  }
+
+  .v {
+    width: 92%;
+    margin: 20px auto;
+    padding: 12px;
+  }
+
+  .yandi-button {
+    min-width: 200px;
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar h1 {
+    font-size: 16px;
+  }
+
+  .navbar-image {
+    height: 40px;
+  }
 }
